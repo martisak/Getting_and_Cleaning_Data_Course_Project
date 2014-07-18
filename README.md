@@ -2,7 +2,7 @@
 
 This is the course project in [Getting and Cleaning Data](https://class.coursera.org/getdata-005) from [Coursera](http://coursera.org). The data comes from [
 Human Activity Recognition Using Smartphones Data Set ](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
- [\[1\]](#refs). 
+ [\[1\]](#refs).
 
 ## Study design
 
@@ -55,6 +55,6 @@ A full description is available at the site where the data was obtained:
 
 see [codebook](codebook.md).
 
-## References
+## <a name="refs"></a>References
 
 [1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes_Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware_Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria_Gasteiz, Spain. Dec 2012
