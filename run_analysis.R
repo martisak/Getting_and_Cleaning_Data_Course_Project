@@ -26,8 +26,10 @@ activity_labels <- read.table('UCI HAR Dataset/activity_labels.txt')
 activity_labels$V2 <- tolower(activity_labels$V2)
 
 # Read features and remove () in the names for readability
+# replace - with _
 names <- read.table('UCI HAR Dataset/features.txt')
-names <- gsub('\\(\\)','',names[,2])
+names <- gsub('\\(\\)','', names[,2]) # Discard first column
+names <- gsub('-','_', names)
 
 ############################################################
 # Test set                                                 #
@@ -81,12 +83,11 @@ rm(list = c("train_set", "train_set_activity", "train_set_subject"))
 # Extracting mean and standard deviation                   #
 ############################################################
 
-# Anything with "mean" or "std"
+# Anything with "mean" or "std" but not "Mean" so angle features are not included.
 dataset_mean_and_std <- dataset[,grep("mean|std", colnames(dataset))]
 dataset_mean_and_std$activity <- dataset$activity
 dataset_mean_and_std$subject <- dataset$subject
 
 #write.table(dataset_mean_and_std,"tidy_dataset.csv", row.names = FALSE)
-
 
 c <-aggregate(dataset_mean_and_std[,1:79], dataset_mean_and_std[,c("subject","activity")], mean)

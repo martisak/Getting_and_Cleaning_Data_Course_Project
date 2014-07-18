@@ -13,3 +13,7 @@ The test and training sets will be merged after subject (number) and activities 
 3. Uses descriptive activity names to name the activities in the data set
 4. Appropriately labels the data set with descriptive variable names.
 5. [TODO] Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+## Codebook
+
+see [codebook](codebook).
