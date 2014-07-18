@@ -3,7 +3,7 @@
 ## Extracted features
 
 | Original number | Feature name        | Meaning |
-|_____|_________________________________|_________|
+|-----|-----------|---------------------|---------|
 | NA  | subject                         | The subject ID |
 | NA  | activity                        | The activity, one of "laying", "sitting", "standing", "walking", "walking_downstairs", "walking_upstairs" |
 | 1   | tBodyAcc_mean_X               | |
