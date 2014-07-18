@@ -37,6 +37,10 @@ A full description is available at the site where the data was obtained:
 
    Feature names are cleaned up, "()" is removed, "-" is replace with "_". CamelCase names are kept on purpose for readability.
 
+   A label is added to each set to denote if it's the train or test set.
+
+   The test and training sets are then merged (pasted together with rbind).
+
 2. Extracts only the measurements on the mean and standard deviation for each measurement.
 
    Only the features containing "mean" or "std" are used. Columns containing "Mean" (capital M) are not used.
@@ -52,6 +56,8 @@ A full description is available at the site where the data was obtained:
 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
   File is saved as "tidy_dataset.txt", which is a tab-delimited table with column names but without rownames.
+
+  Note that the set names are omitted in this aggregation.
 
 ## Codebook
 
