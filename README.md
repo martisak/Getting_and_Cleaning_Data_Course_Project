@@ -35,6 +35,8 @@ A full description is available at the site where the data was obtained:
 
    First the subject and activities are added as column to each set. Activities are replaced with the more descriptive text and is one of "laying", "sitting", "standing", "walking", "walking_downstairs", "walking_upstairs".
 
+   Feature names are cleaned up, "()" is removed, "-" is replace with "_". CamelCase names are kept on purpose for readability.
+
 2. Extracts only the measurements on the mean and standard deviation for each measurement.
 
    Only the features containing "mean" or "std" are used. Columns containing "Mean" (capital M) are not used.
@@ -49,11 +51,16 @@ A full description is available at the site where the data was obtained:
 
 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-  File is saved as "tidy_dataset.csv"
+  File is saved as "tidy_dataset.txt", which is a tab-delimited table with column names but without rownames.
 
 ## Codebook
 
 see [codebook](codebook.md).
+
+
+## Versions
+
+This script has been tested on Mac OS X 10.9.3 ( x86_64-apple-darwin10.8.0 (64-bit) ), [R version 3.0.2](http://www.r-project.org/).
 
 ## <a name="refs"></a>References
 

@@ -93,4 +93,4 @@ dataset_mean_and_std$subject <- dataset$subject
 ############################################################
 
 tidy_dataset <-aggregate(dataset_mean_and_std[,1:79], dataset_mean_and_std[,c("subject","activity")], mean)
-write.table(tidy_dataset,"tidy_dataset.csv", row.names = FALSE)
+write.table(tidy_dataset,"tidy_dataset.txt", row.names = FALSE)
