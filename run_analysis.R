@@ -39,7 +39,7 @@ colnames(test_set) <- names
 
 # Read and add test subjects as column "subject"
 test_set_subject <- read.table('UCI HAR Dataset/test/subject_test.txt')
-test_set$subject <- factor(as.numeric(test_set_subject[,1]))
+test_set$subject <- as.numeric(test_set_subject[,1])
 
 # Read and add test activies
 test_set_activity <- read.table('UCI HAR Dataset/test/y_test.txt')
@@ -58,7 +58,7 @@ colnames(train_set) <- names
 
 # Read and add test subjects as column "subject" (cbind or this?)
 train_set_subject <- read.table('UCI HAR Dataset/train/subject_train.txt')
-train_set$subject <- factor(as.numeric(train_set_subject[,1]))
+train_set$subject <- as.numeric(train_set_subject[,1])
 
 # Read and add test activies
 train_set_activity <- read.table('UCI HAR Dataset/train/y_train.txt')
@@ -81,6 +81,12 @@ rm(list = c("train_set", "train_set_activity", "train_set_subject"))
 # Extracting mean and standard deviation                   #
 ############################################################
 
+# Anything with "mean" or "std"
 dataset_mean_and_std <- dataset[,grep("mean|std", colnames(dataset))]
 dataset_mean_and_std$activity <- dataset$activity
 dataset_mean_and_std$subject <- dataset$subject
+
+#write.table(dataset_mean_and_std,"tidy_dataset.csv", row.names = FALSE)
+
+
+c <-aggregate(dataset_mean_and_std[,1:79], dataset_mean_and_std[,c("subject","activity")], mean)
