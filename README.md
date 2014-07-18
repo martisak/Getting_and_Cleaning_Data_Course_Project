@@ -1,6 +1,6 @@
 ## Running the script
 
-  source('run_analysis.R')
+    source('run_analysis.R')
 
 ## What the script does
 
