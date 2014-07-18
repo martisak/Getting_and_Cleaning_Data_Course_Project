@@ -51,11 +51,11 @@ A full description is available at the site where the data was obtained:
 
 3. Uses descriptive activity names to name the activities in the data set
 
-   Column "activity" contains the description of the activity. See [the codebook](codebook.md).
+   Column "activity" contains the description of the activity, a lower case version of the activity names found in "activity_labels.txt". See [the codebook](codebook.md).
 
 4. Appropriately labels the data set with descriptive variable names.
 
-   See [the codebook](codebook.md).
+   See [the codebook](codebook.md). The variable names have been kept, but modified according to Step 1 to make them more readable (and usable in R). "t" and "f" in the beginning of each variable has been kept to make it easier to read time variables or frequency variables. CamelCase has also been kept for readability, even though I understand some people like lower case variable names.
 
 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
