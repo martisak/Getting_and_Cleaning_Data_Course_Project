@@ -2,11 +2,11 @@
 
 ## Extracted features
 
-| Original number | Feature name        | Meaning |
-|-----|-----------|---------------------|---------|
-| NA  | subject                         | The subject ID |
-| NA  | activity                        | The activity, one of "laying", "sitting", "standing", "walking", "walking_downstairs", "walking_upstairs" |
-| 1   | tBodyAcc_mean_X               | |
+| Original column number              | Feature name        | Meaning                      |
+|-------------------------------------|---------------------|------------------------------|
+| NA                                  | subject             | The subject ID               |
+| NA                                  | activity            | The activity, one of "laying", "sitting", "standing", "walking", "walking_downstairs", "walking_upstairs" |
+| 1   | tBodyAcc_mean_X               | Mean per subject and activity |
 | 2   | tBodyAcc_mean_Y               | |
 | 3   | tBodyAcc_mean_Z               | |
 | 4   | tBodyAcc_std_X                | |

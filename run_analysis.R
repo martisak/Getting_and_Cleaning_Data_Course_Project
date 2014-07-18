@@ -88,6 +88,9 @@ dataset_mean_and_std <- dataset[,grep("mean|std", colnames(dataset))]
 dataset_mean_and_std$activity <- dataset$activity
 dataset_mean_and_std$subject <- dataset$subject
 
-#write.table(dataset_mean_and_std,"tidy_dataset.csv", row.names = FALSE)
+############################################################
+# Summarize                                                #
+############################################################
 
-c <-aggregate(dataset_mean_and_std[,1:79], dataset_mean_and_std[,c("subject","activity")], mean)
+tidy_dataset <-aggregate(dataset_mean_and_std[,1:79], dataset_mean_and_std[,c("subject","activity")], mean)
+write.table(tidy_dataset,"tidy_dataset.csv", row.names = FALSE)
