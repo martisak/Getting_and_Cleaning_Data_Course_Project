@@ -2,8 +2,10 @@
 
 ## Extracted features
 
-| Original number | Feature name        |
-|-----|---------------------------------|
+| Original number | Feature name        | Meaning |
+|-----|---------------------------------|---------|
+| NA  | Subject                         | The subject ID |
+| NA  | Activity                        | The activity, one of laying, sitting, standing, walking, walking_downstairs, walking_upstairs |
 | 1   | tBodyAcc-mean()-X               |
 | 2   | tBodyAcc-mean()-Y               |
 | 3   | tBodyAcc-mean()-Z               |
@@ -83,3 +85,7 @@
 | 542 | fBodyBodyGyroJerkMag-mean()     |
 | 543 | fBodyBodyGyroJerkMag-std()      |
 | 552 | fBodyBodyGyroJerkMag-meanFreq() |
+
+## References
+
+[1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
